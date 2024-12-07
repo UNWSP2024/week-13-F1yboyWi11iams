@@ -140,8 +140,8 @@ def delete():
 
     sure = input("Are you sure you want to delete this contact? (y/n): ")
     if sure.lower() == 'y':
-        num_deleted = delete_entry(selected_id)
-        print(f'{num_deleted} row(s) deleted.')
+        num_deleted = delete_Entries(selected_id)
+        print(f'{num_deleted} Entries deleted.')
 
 def insert_row(name, number):
     conn = None
@@ -198,7 +198,7 @@ def update_row(id, name, number):
 
     return num_updated
 
-def delete_row(id):
+def delete_Entries(id):
     conn = None
     try:
         conn = sqlite3.connect('phonebook.db')
